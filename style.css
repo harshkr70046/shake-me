@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    place-items: center;
+}
+.box1{
+    width: 40rem;
+    height: 20rem;
+    background-color: aqua;
+    position: relative;
+    
+}
+.box2{
+    width: 38rem;
+    height: 18rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.box1:hover{
+    background-color: red;
+    animation: shakeme .3s linear infinite;
+    
+}
+.box2:hover{
+    color: rgb(27, 250, 7);
+}
+@keyframes shakeme{
+    0%{
+        rotate: 20deg;
+    }
+    50%{
+        rotate: -20deg;
+    }
+    100%{
+        rotate: 20deg;
+
+    }
+}
+
+@media (width<=500px) {
+    .box1{
+        width: 25rem;
+        height:15rem ;
+    }
+    .box2{
+        width: 23rem;
+        height: 13rem;
+    }
+}
